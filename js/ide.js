@@ -1,16 +1,19 @@
 const API_KEY = ""; // Get yours for free at https://rapidapi.com/organization/judge0
 
-const AUTH_HEADERS = API_KEY ? {
-    "X-RapidAPI-Key": API_KEY
-} : {};
+// const AUTH_HEADERS = API_KEY ? {
+//     "X-RapidAPI-Key": API_KEY
+// } : {};
+const AUTH_HEADERS = {};
 
-var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
-var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
+// var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
+// var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
+var defaultUrl = "https://longervision.com/judge0";
+var extraApiUrl = "https://longervision.com/judge0";
 
-if (location.hostname == "ide.judge0.com") {
-    defaultUrl = "https://ce.judge0.com";
-    extraApiUrl = "https://extra-ce.judge0.com";
-}
+// if (location.hostname == "ide.judge0.com") {
+//     defaultUrl = "https://ce.judge0.com";
+//     extraApiUrl = "https://extra-ce.judge0.com";
+// }
 
 var apiUrl = defaultUrl;
 var wait = ((localStorageGetItem("wait") || "false") === "true");
