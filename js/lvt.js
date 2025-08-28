@@ -1,16 +1,16 @@
 "use strict";
 
-export const IS_PUTER = puter.env === "app";
+export const IS_LVT = puter.env === "app";
 
-export function usePuter() {
-  return IS_PUTER || puter.auth.isSignedIn();
+export function useLvt() {
+  return IS_LVT || puter.auth.isSignedIn();
 }
 
 async function uiSignIn() {
   document.getElementById("judge0-sign-in-btn").classList.add("judge0-hidden");
   const signOutBtn = document.getElementById("judge0-sign-out-btn");
   signOutBtn.classList.remove("judge0-hidden");
-  signOutBtn.querySelector("#judge0-puter-username").innerText = (
+  signOutBtn.querySelector("#judge0-lvt-username").innerText = (
     await puter.auth.getUser()
   ).username;
 
@@ -31,7 +31,7 @@ function uiSignOut() {
     .classList.remove("judge0-hidden");
   const signOutBtn = document.getElementById("judge0-sign-out-btn");
   signOutBtn.classList.add("judge0-hidden");
-  signOutBtn.querySelector("#judge0-puter-username").innerText = "Sign out";
+  signOutBtn.querySelector("#judge0-lvt-username").innerText = "Sign out";
 
   const modelSelect = document.getElementById("judge0-chat-model-select");
   modelSelect.closest(".ui.selection.dropdown").classList.add("disabled");
