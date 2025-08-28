@@ -17,7 +17,7 @@
     <script>
         var require = {
             paths: {
-                "vs": "./vendor/monaco-editor-0.44.0/min/vs"
+                "vs": "./vendor/monaco-editor/min/vs"
             }
         };
     </script>
@@ -27,9 +27,9 @@
     <link id="judge0-golden-layout-dark-theme-stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/css/goldenlayout-dark-theme.css" integrity="sha512-XfcBrEH69BhsZ0XpvPyzOLgikhAvIG6Znbi6yKi1Jh1iYaOXSXvljWFerhcUl5LYLCuV61KhfCydQ1+MNxnilg==" crossorigin="anonymous" referrerpolicy="no-referrer" disabled>
     <link id="judge0-golden-layout-light-theme-stylesheet" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/css/goldenlayout-light-theme.css" integrity="sha512-/S3N+v8cRHW2GJvM3v9FGHAKOhNgws+V1dYZb1fBxRd9XIwpqZFZB0jug+2HHf64eURsJLqVzCVn92pQTFHHow==" crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <script src="./vendor/monaco-editor-0.44.0/min/vs/loader.js"></script>
-    <script src="./vendor/monaco-editor-0.44.0/min/vs/editor/editor.main.nls.js"></script>
-    <script src="./vendor/monaco-editor-0.44.0/min/vs/editor/editor.main.js"></script>
+    <script src="./vendor/monaco-editor/min/vs/loader.js"></script>
+    <script src="./vendor/monaco-editor/min/vs/editor/editor.main.nls.js"></script>
+    <script src="./vendor/monaco-editor/min/vs/editor/editor.main.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -149,7 +149,7 @@
             <div class="item judge0-showPuterSignInOutButton">
                 <button id="judge0-sign-in-btn" class="ui basic button">
                     <i class="sign-in icon"></i>
-                    Sign in with Puter
+                    Sign in with Longer Vision
                 </button>
                 <button id="judge0-sign-out-btn" class="ui basic button" data-content="Sign out">
                     <i class="sign-out icon"></i>
@@ -189,6 +189,7 @@
             <div class="right menu">
                 <div class="fitted item">
                     <select id="judge0-chat-model-select" class="ui search selection dropdown item">
+                        <option>gpt-5</option>
                         <option>gpt-4o-mini</option>
                         <option>gpt-4o</option>
                         <option>o3-mini</option>
